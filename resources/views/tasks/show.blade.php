@@ -14,6 +14,10 @@
             <th>TASK</th>
             <td>{{ $task->content }}</td>
         </tr>
+        <tr>
+            <th>STATUS</th>
+            <td>{{ $task->status }}</td>
+        </tr>
     </table>
     
     {!! link_to_route('tasks.edit', 'このTASKを編集', ['id' => $task->id], ['class' => 'btn btn-light']) !!}
