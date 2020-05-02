@@ -4,6 +4,8 @@
 
 <!-- ここにページ毎のコンテンツを書く -->
 
+    @if(Auth::check())
+    
     <h1>TASK一覧</h1>
 
     @if (count($tasks) > 0)
@@ -26,7 +28,12 @@
             </tbody>
         </table>
     @endif
-    
     {!! link_to_route('tasks.create', '新規タスク', [],['class' => 'btn btn-danger']) !!}
+    
+    @else
+    login or signup from navbar
+    
+    @endif
+    
 
 @endsection
